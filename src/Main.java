@@ -1,5 +1,6 @@
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 //// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -26,6 +27,7 @@ public class Main {
         //99->student3[0]
         //98->student3[1]
         //95->student3[4]
+        // int siz= student3.length
 
         System.out.println(student3[3]);
 
@@ -58,9 +60,36 @@ public class Main {
     //}
 
 
+    //ArrayList
+        //its size is not fixed
+        //it offers a lot of opearations
+        //like add remove,size etc
+        //int[] arr=new int[5];
+        ArrayList<Integer> number=new ArrayList<>();
+        //add operation
+        number.add(99);
+        number.add(128);
+        number.add(135);
+        number.add(156);
+        number.add(278);
+
+        //number - {99,128,135,156,,278}
+        //Remove Operation
+        number.remove(3);
+        //Set Operation
+        number.set(0,90);//index number and value
+        //Size Operation
+        int siz= number.size();
+
+        //check if some element is present
+
+        boolean aa=number.contains(95);
 
 
+        System.out.println(number);
+        System.out.println(aa);
 
+        // create student using arralist and add 6 subject marks into it and calculate the average (try use most number of operations)
 
     }
 

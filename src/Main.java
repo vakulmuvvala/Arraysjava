@@ -6,13 +6,37 @@ import java.util.*;
 //void main() {
 //    System.out.println("Hello world");
 //}
+    // a class is a blueprint that will be used to create object;
+class Car {
+    String color;
+    String model;
+    int year;
 
+    public Car(String c, String m, int y) {
+        this.color = c;
+        this.model = m;
+        this.year = y;
+    }
+
+    public void displayInfo() {
+        System.out.println("Car Model: " + model);
+        System.out.println("Car Color: " + color);
+        System.out.println("Car Year: " + year);
+    }
+    public void start() {
+        System.out.println("Car is starting...");
+    }
+}
 
 public class Main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        //int num= sc.nextInt();
-        //num=num+1;
+        Car car1 = new Car("Red", "Toyota", 2020);
+        car1.displayInfo();
+        car1.start();
+
+        Car car2 = new Car("Blue", "Honda", 2021);
+        car2.displayInfo();
+        car2.start();
 
         //decleration
         int[] student = new int[5];
@@ -128,6 +152,36 @@ public class Main {
         System.out.println("English Marks: " + EnglishMarks);
 
         System.out.println(songs);
+
+        //conditional statements
+        int age=8;
+        if(age>=18){
+            //code
+            System.out.println("You are eligible to vote");
+        }else{
+            System.out.println("You are not eligible to vote");
+        }
+        int marks1=85;
+        if(marks1>=90){
+            System.out.println("A grade");
+        }else if(marks1>=80){
+            System.out.println("B grade");
+        }else if(marks1>=70){
+            System.out.println("C grade");
+        }else {
+            System.out.println("D grade");
+        }
+
+        //break and continue
+        for(int i=1;i<=10;i++) {
+            if (i == 5) {
+                break;
+            }
+            System.out.println(i);
+        }
+
+
+
     }
 }
 

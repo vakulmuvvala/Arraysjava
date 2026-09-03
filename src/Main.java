@@ -1,7 +1,6 @@
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 
-import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.*;
 
 //// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 //void main() {
@@ -68,7 +67,7 @@ public class Main {
         ArrayList<Integer> number=new ArrayList<>();
         //add operation
         number.add(99);
-        number.add(128);
+        number.add(99);
         number.add(135);
         number.add(156);
         number.add(278);
@@ -77,7 +76,7 @@ public class Main {
         //Remove Operation
         number.remove(3);
         //Set Operation
-        number.set(0,90);//index number and value
+        //number.set(0,90);//index number and value
         //Size Operation
         int siz= number.size();
 
@@ -91,11 +90,45 @@ public class Main {
 
         // create student using arralist and add 6 subject marks into it and calculate the average (try use most number of operations)
 
+
+
+        ArrayList<Integer> marks = new ArrayList<>();
+        marks.add(75);
+        marks.add(82);
+        marks.add(91);
+        marks.add(68);
+        marks.add(89);
+        marks.add(94);
+
+        int sum = 0;
+        for (int m : marks) sum += m;
+
+        double average = (double) sum / marks.size();
+        System.out.println("Average: " + average);
+
+
+        //set (to tackle duplicates)
+        Set<String> songs= new HashSet<>();
+        songs.add("song1");
+        songs.add("song1");
+        songs.add("song2");
+        songs.add("song3");
+
+        //when to wantto store something as key value pair we use map
+        Map<String,Integer> mark= new HashMap<>();
+        mark.put("Math", 95);
+        mark.put("Science", 90);
+        mark.put("English", 85);
+
+        int EnglishMarks = mark.get("English");
+
+        boolean xyz= mark.containsKey("English");
+
+
+        System.out.println("English Marks: " + EnglishMarks);
+
+        System.out.println(songs);
     }
-
-
-    static void methodVakul(){
-        System.out.println("Hello vakul");
-    }
-
 }
+
+
